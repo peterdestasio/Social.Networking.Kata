@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Networking.Kata", "Social.Networking.Kata\Social.Networking.Kata.csproj", "{EAEBCA0D-A690-4697-AAB6-6519EAF1285F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Networking.Kata.BusinessService", "Social.Networking.Kata.BusinessService\Social.Networking.Kata.BusinessService.csproj", "{F45FAF76-E246-4A99-96C7-3B69035454E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Networking.Kata.DAL", "Social.Networking.Kata.DAL\Social.Networking.Kata.DAL.csproj", "{47EB9889-1E3F-4D86-AFA6-5F3946F327D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Networking.Kata.DAL.UnitTest", "Social.Networking.Kata.DAL.Test\Social.Networking.Kata.DAL.UnitTest.csproj", "{4FD94B5E-AD61-4CF2-8651-78E4337880D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Networking.Kata.BusinessService.UnitTest", "Social.Networking.Kata.BusinessService.Test\Social.Networking.Kata.BusinessService.UnitTest.csproj", "{534B230E-CB1B-4C65-B754-E7A0CC53B4A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Social.Networking.Kata.Controller", "Social.Networking.Kata.Controller\Social.Networking.Kata.Controller.csproj", "{ECFF5EAE-FC2A-4A1F-B157-C655769A7B98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAEBCA0D-A690-4697-AAB6-6519EAF1285F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAEBCA0D-A690-4697-AAB6-6519EAF1285F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAEBCA0D-A690-4697-AAB6-6519EAF1285F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAEBCA0D-A690-4697-AAB6-6519EAF1285F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45FAF76-E246-4A99-96C7-3B69035454E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45FAF76-E246-4A99-96C7-3B69035454E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45FAF76-E246-4A99-96C7-3B69035454E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45FAF76-E246-4A99-96C7-3B69035454E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47EB9889-1E3F-4D86-AFA6-5F3946F327D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47EB9889-1E3F-4D86-AFA6-5F3946F327D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47EB9889-1E3F-4D86-AFA6-5F3946F327D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47EB9889-1E3F-4D86-AFA6-5F3946F327D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD94B5E-AD61-4CF2-8651-78E4337880D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD94B5E-AD61-4CF2-8651-78E4337880D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD94B5E-AD61-4CF2-8651-78E4337880D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD94B5E-AD61-4CF2-8651-78E4337880D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534B230E-CB1B-4C65-B754-E7A0CC53B4A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534B230E-CB1B-4C65-B754-E7A0CC53B4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534B230E-CB1B-4C65-B754-E7A0CC53B4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534B230E-CB1B-4C65-B754-E7A0CC53B4A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECFF5EAE-FC2A-4A1F-B157-C655769A7B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECFF5EAE-FC2A-4A1F-B157-C655769A7B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECFF5EAE-FC2A-4A1F-B157-C655769A7B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFF5EAE-FC2A-4A1F-B157-C655769A7B98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3954514-4E45-4001-A33D-A1B776854304}
+	EndGlobalSection
+EndGlobal
