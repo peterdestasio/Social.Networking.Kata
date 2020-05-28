@@ -1,19 +1,10 @@
-﻿using Social.Networking.Kata.BusinessService.Interfaces;
-using Social.Networking.Kata.BusinessService.Services;
-using Social.Networking.Kata.Controller;
+﻿using Social.Networking.Kata.Controller;
 using System;
 
 namespace Social.Networking.Kata
 {
     public class Startup : IStartup
     {
-
-        private const string POST = "->";
-        private const string READ = "";
-        private const string FOLLOW = "follows";
-        private const string WALL = "wall";
-
-
         private ISocialNetworkController _socialNetworkController;
 
         public Startup(ISocialNetworkController socialNetworkController)
@@ -22,16 +13,19 @@ namespace Social.Networking.Kata
         }
 
         public void Run()
-        {
-            try
-            {
-                _socialNetworkController.executeRequest(Console.ReadLine());
+        {        
+            Console.WriteLine("Welcome to Social Network Kata!");
+            Console.WriteLine("Commands Allowed: <User> -> Message, <User>, <User> follows <User>, <User> wall");
+            Console.WriteLine("Type exit to Terminate");
+            while (true)
+            {                
+                var request = Console.ReadLine();
+                if (request.Equals("exit"))
+                {
+                    break;
+                }
+                _socialNetworkController.executeRequest(request);
             }
-            catch(Exception e)
-            {
-                var a = e;
-            }             
-
         }
     }
 }

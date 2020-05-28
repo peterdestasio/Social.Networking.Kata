@@ -2,6 +2,7 @@
 {
     public interface IDBHandler
     {
-        void Write(string followerId, string followedId);
+        void Write(string message);
+        string[] ReadAllData();
     }
 }

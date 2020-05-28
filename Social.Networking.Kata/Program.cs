@@ -20,10 +20,9 @@ namespace Social.Networking.Kata
                 if (e.Message != null)
                 {
                     Console.WriteLine($"Error:\n{e.Message }\n");
+                    Console.ReadLine();
                 }
-
             }
-
         }
     }
 }

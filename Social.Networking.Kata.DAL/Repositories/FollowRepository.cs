@@ -1,5 +1,7 @@
-﻿using Social.Networking.Kata.DAL.Interfaces;
-using System;
+﻿using Newtonsoft.Json;
+using Social.Networking.Kata.DAL.Interfaces;
+using Social.Networking.Kata.DAL.Model;
+using System.Collections.Generic;
 
 namespace Social.Networking.Kata.DAL.Repositories
 {
@@ -10,9 +12,25 @@ namespace Social.Networking.Kata.DAL.Repositories
         {
             _idbHandler = idbHandler;
         }
-        public void follow(string userId, string followedId)
+        public void follow(string followMessage)
         {
-            _idbHandler.Write(userId, followedId);
+            _idbHandler.Write(followMessage);
+        }
+
+        public List<Follow> getFollowedList(string userId)
+        {
+            var lines = _idbHandler.ReadAllData();
+            var followList = new List<Follow>();
+            foreach (var line in lines)
+            {
+                var message = JsonConvert.DeserializeObject<Follow>(line);
+
+                if (message.FollowerId.Equals(userId))
+                {
+                    followList.Add(message);
+                }
+            }
+            return followList;
         }
     }
 }

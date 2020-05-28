@@ -1,30 +1,27 @@
 ﻿using Social.Networking.Kata.DAL.Interfaces;
-using System;
+using System.IO;
 
 namespace Social.Networking.Kata.DAL.Logic
 {
     public class DBHandler: IDBHandler
     {
-
-        //public string[] GetRows(string fileName)
-        //{
-        //    string rawString = File.ReadAllText(fileName);
-        //    rawString = rawString.Replace('\n', '\r');
-        //    string[] rows = rawString.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
-        //    return rows;
-        //}
-        private readonly string _fileName;
-        public DBHandler(string fileName)
+        protected readonly string _filePath;
+        public DBHandler(string filePath)
         {
-            _fileName = fileName;
+            _filePath = filePath;
         }
-        public void Write(string followerId, string followedId)
+        public void Write(string message)
         {
-            using (System.IO.StreamWriter file =
-           new System.IO.StreamWriter(_fileName, true))
+            using (StreamWriter file = new StreamWriter(_filePath, true))
             {
-                file.WriteLine(followerId + "," + followedId);
+                file.WriteLine(message);
             }
         }
+
+        public string[] ReadAllData()
+        {
+            return File.ReadAllLines(_filePath);
+        }
+
     }
 }

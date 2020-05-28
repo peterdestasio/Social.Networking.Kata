@@ -1,13 +1,11 @@
-﻿using System;
+﻿using Social.Networking.Kata.DAL.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Social.Networking.Kata.DAL.Interfaces
 {
     public interface IFollowRepository
     {
-        void follow(string userId, string followedId);
+        void follow(string followMessage);
+        List<Follow> getFollowedList(string userId);
     }
 }

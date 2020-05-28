@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,17 +46,18 @@
   <ItemGroup>
     <Compile Include="Interfaces\IFollowRepository.cs" />
     <Compile Include="Interfaces\IDBHandler.cs" />
-    <Compile Include="Interfaces\IUserRepository.cs" />
-    <Compile Include="Interfaces\IWallMessageRepository.cs" />
+    <Compile Include="Interfaces\IMessageRepository.cs" />
     <Compile Include="Logic\DBHandler.cs" />
-    <Compile Include="Model\Followed.cs" />
-    <Compile Include="Model\User.cs" />
+    <Compile Include="Logic\FollowFileDBHandler.cs" />
+    <Compile Include="Logic\MessageFileDBHandler.cs" />
+    <Compile Include="Model\Follow.cs" />
     <Compile Include="Model\WallMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FollowRepository.cs" />
-    <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Repositories\WallMessageRepository.cs" />
+    <Compile Include="Repositories\MessageRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
