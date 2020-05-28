@@ -19,9 +19,14 @@ namespace Social.Networking.Kata.BusinessService.UnitTest
         [TestMethod]
         public void Test_Follow_Command()
         {
+            //arrange
             var input = "Peter follows Mary Poppins";
-            var result = _commandParser.parse(input);
             string[] expected = { "Peter", "follows", "Mary Poppins" };
+
+            //act
+            var result = _commandParser.parse(input);
+
+            //assert
             Assert.AreEqual(result[0], expected[0]);
             Assert.AreEqual(result[1], expected[1]);
             Assert.AreEqual(result[2], expected[2]);
@@ -30,9 +35,14 @@ namespace Social.Networking.Kata.BusinessService.UnitTest
         [TestMethod]
         public void Test_Post_To_Wall_Command()
         {
+            //arrange
             var input = "Peter -> hey this is My wall";
-            var result = _commandParser.parse(input);
             string[] expected = { "Peter", "->", "hey this is My wall" };
+
+            //act
+            var result = _commandParser.parse(input);            
+
+            //assert
             Assert.AreEqual(result[0], expected[0]);
             Assert.AreEqual(result[1], expected[1]);
             Assert.AreEqual(result[2], expected[2]);
@@ -41,9 +51,14 @@ namespace Social.Networking.Kata.BusinessService.UnitTest
         [TestMethod]
         public void Test_View_Wall_Command()
         {
+            //arrange
             var input = "Peter";
+            string[] expected = { "Peter", "" };
+
+            //act
             var result = _commandParser.parse(input);
-            string[] expected = { "Peter", ""};
+            
+            //assert
             Assert.AreEqual(result[0], expected[0]);
         }
 
@@ -51,9 +66,14 @@ namespace Social.Networking.Kata.BusinessService.UnitTest
         [TestMethod]
         public void Test_View_Wall_By_Id_Command()
         {
+            //arrange
             var input = "Peter wall";
-            var result = _commandParser.parse(input);
             string[] expected = { "Peter", "wall" };
+
+            //act
+            var result = _commandParser.parse(input);
+
+            //assert
             Assert.AreEqual(result[0], expected[0]);
             Assert.AreEqual(result[1], expected[1]);
         }

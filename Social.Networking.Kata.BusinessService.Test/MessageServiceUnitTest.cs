@@ -27,24 +27,34 @@ namespace Social.Networking.Kata.BusinessService.Test
         [TestMethod]
         public void Test_View_Private_Wall()
         {
+            //arrange
             var wallList = new List<WallMessage>();
             wallList.Add(new WallMessage { UserId = "Mary", Message = "hey Peter", Time = DateTime.Now });
             _messageRepository.Setup(m => m.getPrivateWall(It.IsAny<string>())).Returns(wallList);
             _timeFormatter.Setup(m => m.elapsedMinutes(It.IsAny<DateTime>())).Returns("10");
-            var actual = _messageService.viewPrivateWall("Mary", true);
             var expected = "Mary - hey Peter (10 minutes ago)\r\n";
+
+            //act
+            var actual = _messageService.viewPrivateWall("Mary", true);            
+
+            //assert
             Assert.AreEqual(actual, expected);
         }
 
         [TestMethod]
         public void Test_View_Private_Wall_No_Show_Id()
         {
+            //arrange
             var wallList = new List<WallMessage>();
             wallList.Add(new WallMessage { UserId = "Mary", Message = "hey Peter", Time = DateTime.Now });
             _messageRepository.Setup(m => m.getPrivateWall(It.IsAny<string>())).Returns(wallList);
             _timeFormatter.Setup(m => m.elapsedMinutes(It.IsAny<DateTime>())).Returns("10");
-            var actual = _messageService.viewPrivateWall("Mary", false);
             var expected = "hey Peter (10 minutes ago)\r\n";
+
+            //act
+            var actual = _messageService.viewPrivateWall("Mary", false);            
+
+            //assert
             Assert.AreEqual(actual, expected);
         }
 

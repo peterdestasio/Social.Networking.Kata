@@ -23,11 +23,16 @@ namespace Social.Networking.Kata.DAL.Test.Repositories
         [TestMethod]
         public void Test_Get_Followed_List()
         {
+            //arrange
             string[] lines = { "{\"FollowerId\":\"Mary\",\"FollowedId\":\"Poppins\"}" };
             _dbHandler.Setup(m => m.ReadAllData()).Returns(lines);
             var expected = new List<Follow>();
             expected.Add(new Follow { FollowerId = "Mary", FollowedId = "Poppins" });
+
+            //act
             var actual = _followRepository.getFollowedList("Mary");
+
+            //assert
             Assert.AreEqual(actual[0].FollowerId, expected[0].FollowerId);
             Assert.AreEqual(actual[0].FollowedId, expected[0].FollowedId);
         }

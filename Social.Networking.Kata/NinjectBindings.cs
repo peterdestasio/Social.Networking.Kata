@@ -15,8 +15,8 @@ namespace Social.Networking.Kata
             Bind<ISocialNetworkController>().To<SocialNetworkController>();
             Bind<IUserService>().To<UserService>();
             Bind<ICommandParser>().To<CommandParser>();
-            Bind<IDBHandler>().To<FollowFileDBHandler>().WhenInjectedInto(typeof(FollowRepository)).WithConstructorArgument("filePath", @"..\..\Data\Follow.txt");
-            Bind<IDBHandler>().To<MessageFileDBHandler>().WhenInjectedInto(typeof(MessageRepository)).WithConstructorArgument("filePath", @"..\..\Data\Messages.txt");
+            Bind<IDBHandler>().To<FollowFileDBHandler>().WhenInjectedInto(typeof(FollowRepository)).WithConstructorArgument("filePath", @"..\..\Follow.txt");
+            Bind<IDBHandler>().To<MessageFileDBHandler>().WhenInjectedInto(typeof(MessageRepository)).WithConstructorArgument("filePath", @"..\..\Messages.txt");
             Bind<IFollowRepository>().To<FollowRepository>();
             Bind<IMessageRepository>().To<MessageRepository>();
             Bind<ITimeFormatter>().To<TimeFormatter>();
